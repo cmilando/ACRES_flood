@@ -8,7 +8,7 @@ rm(list = ls()); gc()
 # COUNTY A
 RR_1     <- 1.50  # the RR on lag 0
 RR_1_lag <- 1.20  # the RR on lags 1:4
-ybeta_1  <- 1.00  # the year trend (in log space, so 2 means doubling every year)
+ybeta_1  <- 1.05  # the year trend (in log space, so 2 means doubling every year)
 
 # COUNTY B
 RR_2     <- 1.50  # the RR on lag 0
