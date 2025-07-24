@@ -28,7 +28,7 @@
 df_weekly <- df_weekly %>% arrange(county, week_start)
 
 cb.flood <- crossbasis(df_weekly$is_flood_week,
-                       lag=6,
+                       lag = 4,
                        argvar=list(fun="strata", breaks = 0.99),
                        arglag = list(fun = "poly", degree = 4),
                        group = df_weekly$county)

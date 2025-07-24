@@ -5,10 +5,13 @@
 # clear
 rm(list = ls()); gc()
 
+#
+RR_doubleFlood <- 2
+
 # COUNTY A
 RR_1     <- 1.50  # the RR on lag 0
-RR_1_lag <- 1.20  # the RR on lags 1:4
-ybeta_1  <- 1.05  # the year trend (in log space, so 2 means doubling every year)
+RR_1_lag <- 1.00  # the RR on lags 1:4
+ybeta_1  <- 1.00  # the year trend (in log space, so 2 means doubling every year)
 
 # COUNTY B
 RR_2     <- 1.50  # the RR on lag 0
@@ -154,6 +157,8 @@ points(t1$est, y_vals, pch = 5, cex = 0.8)
 mod.v0b <- gnm(n_cases ~ is_flood_week +
                  # manually do lags
                  lag1 + lag2 + lag3 + lag4 +
+                 # is it double
+                 # doubleFlood +
                  # account for covariates
                  avg_tmp +
                  # ********

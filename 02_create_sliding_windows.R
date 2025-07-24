@@ -99,8 +99,7 @@ make_strata <- function(strata_i) {
              week_start < end_of_this_period,
              county == this_flood$county) %>%
       mutate(is_case_period = 0,
-             period_label = 'post',
-             cases_updated = 1 * n_cases)
+             period_label = 'post')
     
     search_for_post = F
     

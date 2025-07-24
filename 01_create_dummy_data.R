@@ -33,8 +33,8 @@ summary(chicagoNMMAPS$date)
 
 # reset cases based on a year trend
 set_cases <- function(df, 
-                      baseline = 100, 
-                      variance = 5,
+                      baseline = 10000, 
+                      variance = 500,
                       baseline_yr = 1987,
                       year_beta = 1.2,
                       RR = 2,
