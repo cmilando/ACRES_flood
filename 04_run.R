@@ -19,6 +19,11 @@ source('01_create_dummy_data.R')
 source('02_create_sliding_windows.R')
 source('03_strata_crossbasis.R')
 
+# uncomment this if you want to save it as an image
+# scale = 1.5
+# png("demo_v1.png", units = 'in', 
+#     width = 15.6/scale, 
+#     height = 8.5/scale, res = 600)
 
 par(mfrow = c(2, 2))
 
@@ -245,7 +250,7 @@ points(t1$est, y_vals, pch = 5, cex = 0.8)
 plot(cp, 'slices', var = c(1),  main = 'CB with Lag')
 
 
-
+# dev.off()
 
 
 
