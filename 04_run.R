@@ -7,7 +7,7 @@ rm(list = ls()); gc()
 
 # COUNTY A
 RR_1     <- 1.50  # the RR on lag 0
-RR_1_lag <- 1.00  # the RR on lags 1:4
+RR_1_lag <- 1.20  # the RR on lags 1:4
 ybeta_1  <- 1.00  # the year trend (in log space, so 2 means doubling every year)
 
 # COUNTY B
@@ -21,8 +21,8 @@ source('03_strata_crossbasis.R')
 
 # uncomment this if you want to save it as an image
 # scale = 1.5
-# png("demo_v1.png", units = 'in', 
-#     width = 15.6/scale, 
+# png("demo_v1.png", units = 'in',
+#     width = 15.6/scale,
 #     height = 8.5/scale, res = 600)
 
 par(mfrow = c(2, 2))
