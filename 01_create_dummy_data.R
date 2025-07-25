@@ -238,13 +238,11 @@ for(county_i in 1:N_COUNTIES) {
     if(this_df_w_l$is_flood_week[i] == 1) {
       this_df_w_l$n_cases[i] = this_df_w_l$RR[i] * this_df_w_l$case_baseline[i]
     }
-    ## lagged effect
+    ## lagged effect - JUST FOR THE FIRST 2 weeks, so you can see 0s on days 3 and 4
     else {
       if(i > 4) {
         if(this_df_w_l$lag1[i] == 1 |
-           this_df_w_l$lag2[i] == 1 |
-           this_df_w_l$lag3[i] == 1 |
-           this_df_w_l$lag4[i] == 1)  {
+           this_df_w_l$lag2[i] == 1 )  {
           this_df_w_l$n_cases[i] = this_df_w_l$RR_lag[i] * this_df_w_l$case_baseline[i]
         }
       }
